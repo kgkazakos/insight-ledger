@@ -1,7 +1,7 @@
 """
 LLM enrichment for insight-ledger.
 
-Backends: anthropic/claude-opus-4-7, gemini/gemini-3.1-pro-preview, openai/gpt-5.5
+Backends: anthropic/claude-opus-4-7, gemini/gemini-4-argon, openai/gpt-5.5
 All via LiteLLM. Fails gracefully when no API key is present.
 LLM enrichment is ON by default when a key is detected.
 """
@@ -35,7 +35,7 @@ def _detect_backend() -> Optional[str]:
         return None
     key_map = {
         "anthropic/claude-opus-4-7": "ANTHROPIC_API_KEY",
-        "gemini/gemini-3.1-pro-preview": "GEMINI_API_KEY",
+        "gemini/gemini-4-argon": "GEMINI_API_KEY",
         "openai/gpt-5.5": "OPENAI_API_KEY",
     }
     for backend, env_var in key_map.items():
@@ -53,7 +53,7 @@ def available_backends() -> list[str]:
         return []
     key_map = {
         "anthropic/claude-opus-4-7": "ANTHROPIC_API_KEY",
-        "gemini/gemini-3.1-pro-preview": "GEMINI_API_KEY",
+        "gemini/gemini-4-argon": "GEMINI_API_KEY",
         "openai/gpt-5.5": "OPENAI_API_KEY",
     }
     return [b for b, k in key_map.items() if os.environ.get(k)]

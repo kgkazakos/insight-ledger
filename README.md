@@ -134,7 +134,7 @@ Set any one environment variable to activate optional LLM enrichment:
 
 ```bash
 export ANTHROPIC_API_KEY=sk-...    # anthropic/claude-opus-4-7
-export GEMINI_API_KEY=...          # gemini/gemini-3.1-pro-preview
+export GEMINI_API_KEY=...          # gemini/gemini-4-argon
 export OPENAI_API_KEY=sk-...       # openai/gpt-5.5
 ```
 
